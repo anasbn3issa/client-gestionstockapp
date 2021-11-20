@@ -1,0 +1,52 @@
+<form [formGroup]="myForm" (submit)="addClient()">
+    <div class="form-group">
+        <label>Id User</label>
+        <input type="email" class="form-control" formControlName="idClient" aria-describedby="emailHelp" placeholder="Enter Id">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your Id with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label>Email address</label>
+        <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <app-error [myError]="myForm.get('email').errors" *ngIf="myEmail.invalid && myForm.get('email').touched"></app-error>
+    <div class="form-group">
+        <label >Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+    </div>
+    <app-error [myError]="myForm.get('password').errors" *ngIf="myPassword.invalid && myForm.get('password').touched"></app-error>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control"  formControlName="prenom" placeholder="Nom">
+    </div>
+    <app-error [myError]="myForm.get('prenom').errors" *ngIf="myPrenom.invalid && myForm.get('prenom').touched"></app-error>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control"  formControlName="nom" placeholder="Prenom">
+    </div>
+    <app-error [myError]="myForm.get('nom').errors" *ngIf="myNom.invalid && myForm.get('nom').touched"></app-error>
+    <div class="form-group">
+        <label>Profession</label>
+        <input type="text" class="form-control"  formControlName="profession" placeholder="Profession">
+    </div>
+    <app-error [myError]="myForm.get('profession').errors" *ngIf="myProfession.invalid && myForm.get('profession').touched"></app-error>
+    <div class="form-group">
+        <label>Date de Naissance</label>
+        <input type="date" class="form-control" formControlName="dateDeNaissance" placeholder="Date de Naissance">
+    </div><br/>
+    <div class="form-group">
+        <label>Categorie Client</label><br/>
+        <select  class="form-control"  formControlName="categorieClient">
+            <option>Fidele</option>
+            <option>Ordinaire</option>
+            <option>Premium</option>
+        </select>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Add Client" >
+</form>
+
+<datalist id="categoriesclient">
+    <option>Fidele</option>
+    <option>Ordinaire</option>
+    <option>Premium</option>
+</datalist>
