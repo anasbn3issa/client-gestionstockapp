@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     ClientDetailsComponent,
     ClientNewComponent,
     ClientEditComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

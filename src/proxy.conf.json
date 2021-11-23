@@ -1,0 +1,7 @@
+{
+    "/SpringMVC": {
+    "target": "http://localhost:8089/SpringMVC",
+    "secure": false,
+    "logLevel": "debug"
+    }
+}

@@ -10,6 +10,7 @@
                 <th scope="col">email</th>
                 <th scope="col">category</th>
                 <th scope="col">profession</th>
+                <th scope="col">Opérations</th>
               </tr>
             </thead>
             <tbody>
@@ -19,6 +20,8 @@
                     <td>{{ c.email }}</td>
                     <td>{{ c.categorieClient }}</td>
                     <td>{{ c.profession }}</td>
+                    <td><a class="btn btn-success" [routerLink]="['/detailsproduct']">Details</a></td>
+                    <td><button (click)="deleteClient(c.idClient)" class="btn btn-danger">Delete</button></td>
                 </tr>
               
             </tbody>

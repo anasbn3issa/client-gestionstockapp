@@ -13,15 +13,22 @@ export class ClientListComponent implements OnInit {
   constructor(private clientService:ClientService) { }
 
   ngOnInit(): void {
-    this.listClients = this.clientService.getClientsTest();
+    //this.listClients = this.clientService.getClientsTest();
     //console.log(this.listClients);
 
-    /*this.clientService.getClients().subscribe(
+    this.clientService.getClients().subscribe(
       (data) => {
         this.listClients = data;
         console.log(this.listClients);
       }
-    );*/
+    );
   }
+
+  deleteClient(id: number) {
+    this.clientService.deleteClient(id);
+  }
+  /*detailsClient(id: number) {
+
+  }*/
 
 }

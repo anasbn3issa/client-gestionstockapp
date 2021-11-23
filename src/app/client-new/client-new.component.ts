@@ -16,8 +16,8 @@ export class ClientNewComponent implements OnInit {
   ngOnInit(): void { 
     this.myForm = new FormGroup({
       idClient: new FormControl('',[Validators.required]),
-      nom: new FormControl('',[Validators.required]),
-      prenom: new FormControl('',[Validators.required]),
+      nom: new FormControl('',[Validators.required,Validators.minLength(3)]),
+      prenom: new FormControl('',[Validators.required,Validators.minLength(3)]),
       dateDeNaissance: new FormControl('',[Validators.required]),
       password: new FormControl('',[Validators.required]),
       email: new FormControl('',[Validators.required,,Validators.pattern("^[a-zA-Z0-9._-]+@gmail.com")]),
