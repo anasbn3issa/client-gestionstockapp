@@ -12,13 +12,13 @@ export class ClientDetailsComponent implements OnInit {
   client: Client;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {/*
     this.client.nom="BEN AISSA";
     this.client.prenom="Anas";
-    this.client.profession="mnayek";
+    this.client.profession="ss";
     this.client.idClient=69;
     this.client.dateDeNaissance="03/05/1999";
-    this.client.categorieClient="Premium";
+    this.client.categorieClient="Premium";*/
   }
 
 }

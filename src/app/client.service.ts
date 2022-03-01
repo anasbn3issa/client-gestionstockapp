@@ -45,7 +45,9 @@ export class ClientService {
   }
 
   getClients(): Observable<Client[]> {
-    return this.myHttp.get<Client[]>('/SpringMVC/client/retrieve-all-clients');
+    
+    return this.myHttp.get<Client[]>('http://localhost:8089/SpringMVC/client/retrieve-all-clients');
+    //return this.myHttp.get<Client[]>('/SpringMVC/client/retrieve-all-clients');
   }
   deleteClient (id:number){
     return this.myHttp.delete('/SpringMVC/client/delete/'+id);
